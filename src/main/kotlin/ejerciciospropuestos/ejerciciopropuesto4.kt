@@ -1,4 +1,4 @@
-/*
+package ejerciciospropuestos/*
 Realizar un programa que lea por teclado cuatro valores numéricos enteros e informar su suma y promedio.
 
  */

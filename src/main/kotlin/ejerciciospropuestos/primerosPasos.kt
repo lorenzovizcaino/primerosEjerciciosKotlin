@@ -1,3 +1,5 @@
+package ejerciciospropuestos
+
 fun main() {
     val valor1: Int=100
     val valor2: Int=400

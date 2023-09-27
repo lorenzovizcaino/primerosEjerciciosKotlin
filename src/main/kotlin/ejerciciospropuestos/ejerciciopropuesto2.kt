@@ -1,4 +1,4 @@
-
+package ejerciciospropuestos
 
 /*
 Definir tres variables inmutables y cargar por asignación los pesos de tres personas

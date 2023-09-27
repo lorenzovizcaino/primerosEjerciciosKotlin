@@ -7,6 +7,7 @@ fun main() {
     //MenorDeTresNumeros()
     //notasConWhile()
     //alturasPersonasConWhile()
+    paresImparesWhile()
     //bancoDoWhile()
     //triangulosFor()
     //AnalizarNumerosFor()
@@ -14,10 +15,33 @@ fun main() {
     //mayor3ValoresWhen()
     //triangulosWhen()
     //HijosFamiliasWhen()
-    tresFunciones()
+    //tresFunciones()
 
 
 }
+/*
+Desarrollar un programa que permita cargar n números enteros y luego nos informe cuántos valores fueron pares y cuántos impares.
+Emplear el operador "%" en la condición de la estructura condicional:
+	if (valor % 2 == 0)         //Si el if se verifica verdadero luego es par.
+ */
+fun paresImparesWhile() {
+    var cantNumeros:Int=0
+    var contador:Int=0
+    var numero=0
+    var pares=0
+    var impares=0
+    println("Cuantos numeros quieres comprobar")
+    cantNumeros= readln().toInt()
+    while(contador<cantNumeros){
+        println("Dame el numero ${++contador}")
+        numero= readln().toInt()
+        if(numero%2==0) pares++
+        else impares++
+    }
+    println("Has introducido $pares numeros pares" +
+            "\nHas introducido $impares numeros impares")
+}
+
 /*
 Confeccionar una aplicación que muestre una presentación en pantalla del programa. Solicite la carga de dos valores y nos muestre la suma.
 Mostrar finalmente un mensaje de despedida del programa.

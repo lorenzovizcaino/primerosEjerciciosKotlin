@@ -1,4 +1,4 @@
-/*
+package ejerciciospropuestos/*
 Ingresar por teclado un valor entero.
 Almacenar en otra variable el cuadrado de dicho número si el valor ingresado es par,
 en caso que sea impar guardar el cubo.
