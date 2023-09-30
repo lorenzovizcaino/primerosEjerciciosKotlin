@@ -8,7 +8,7 @@ fun main() {
     //notasConWhile()
     //alturasPersonasConWhile()
     //paresImparesWhile()
-    bancoDoWhile()
+    //bancoDoWhile()
     //triangulosFor()
     //AnalizarNumerosFor()
     //positivoNegativoNuloWhen()
@@ -16,9 +16,148 @@ fun main() {
     //triangulosWhen()
     //HijosFamiliasWhen()
     //tresFunciones()
-
+    //subrayarString()
+    //sumarConFuncionPorDefecto()
+    //funcionesNombradas()
+    //tablaMultiplicarNombrada()
+    //operariosArrays()
+    //AlturaPersonasArrays()
+    ArrayOrdenado()
 
 }
+/*
+Cargar un array de 10 elementos de tipo entero y verificar posteriormente si el mismo está ordenado de menor a mayor.
+ */
+fun ArrayOrdenado() {
+    var ordenArray1:Array<Int> = arrayOf(1,2,3,4,5,6,7,8,9,10)
+    var ordenArray2:Array<Int> = arrayOf(1,20,3,4,5,6,70,8,9,10)
+    ComprobarArray(ordenArray1)
+    ComprobarArray(ordenArray2)
+
+}
+
+fun ComprobarArray(ordenArray: Array<Int>) {
+    var bandera:Boolean=true
+    var primerInt=ordenArray[0]
+    for (i in 0..ordenArray.size-1){
+        if(ordenArray[i]<primerInt) {
+            bandera=false
+            break
+        }else{
+            primerInt=ordenArray[i]
+        }
+    }
+    if(bandera) println("Los numeros del array estan ordenados")
+    else println("Los numeros del array no estan ordenados")
+}
+
+/*
+Definir un array de 5 componentes de tipo Float que representen las alturas de 5 personas.
+Obtener el promedio de las mismas.
+Contar cuántas personas son más altas que el promedio y cuántas más bajas.
+ */
+fun AlturaPersonasArrays() {
+    var alturaPersonas:Array<Float> = arrayOf(1.80f,1.65f,2.02f,1.54f,1.71f)
+    var sumaAlturas:Float=0.0f
+    var promedioAlturas:Float=0.0f
+    var personasMasAltasPromedio:Int=0
+    var personasMasBajasPromedio:Int=0
+    for (i in 0..alturaPersonas.size-1){
+        sumaAlturas+=alturaPersonas[i]
+    }
+    promedioAlturas=sumaAlturas/alturaPersonas.size
+    val promedioFormateado=String.format("%.2f",promedioAlturas)
+    println("Promedio de las alturas del array: $promedioFormateado")
+
+
+    for (i in 0..alturaPersonas.size-1){
+        if(alturaPersonas[i]>promedioAlturas) personasMasAltasPromedio++
+        else personasMasBajasPromedio++
+    }
+    println("Personas mas altas que el promedio $personasMasAltasPromedio")
+    println("Personas mas bajas que el promedio $personasMasBajasPromedio")
+}
+
+/*
+Se desea guardar los sueldos de 5 operarios.
+Según lo conocido deberíamos definir 5 variables si queremos tener en un cierto momento los 5 sueldos almacenados en memoria.
+Empleando un arreglo solo se requiere definir un único nombre y accedemos a cada elemento por medio del subíndice.
+ */
+fun operariosArrays() {
+    var sueldos: Array<Double> = arrayOf(200.34,100.45,300.56,200.00)
+    for(i in 0..sueldos.size-1){
+        println("Sueldo ${i+1} = ${sueldos[i]}")
+    }
+
+}
+
+/*
+Elaborar una función que muestre la tabla de multiplicar del valor que le enviemos como parámetro.
+Definir un segundo parámetro llamado termino que por defecto almacene el valor 10.
+Se deben mostrar tantos términos de la tabla de multiplicar como lo indica el segundo parámetro.
+
+Llamar a la función desde la main con argumentos nombrados.
+ */
+fun tablaMultiplicarNombrada() {
+    Multiplicando(6,5)
+    Multiplicando(7)
+    Multiplicando(termino = 4, valor = 10)
+}
+
+fun Multiplicando(valor: Int, termino: Int=10) {
+    println("TABLA DEL $valor CON $termino TERMINOS")
+    for(i in 0..termino-1){
+        println("$valor x $i = ${valor*i}")
+    }
+    println()
+
+}
+
+/*
+Confeccionar una función que reciba el nombre de un operario, el pago por hora y la cantidad de horas trabajadas.
+Debe mostrar su sueldo y el nombre. Hacer la llamada de la función mediante argumentos nombrados.
+ */
+fun funcionesNombradas() {
+    CalcularSueldo("Antonio",15,160)
+    CalcularSueldo(precioHora = 12, nombre = "Luis", horasTrabajadas = 300)
+    CalcularSueldo(horasTrabajadas = 120, precioHora = 20, nombre = "Maria")
+}
+
+fun CalcularSueldo(nombre: String, precioHora: Int, horasTrabajadas: Int) {
+    println("EL sueldo del trabajador: $nombre es de ${precioHora*horasTrabajadas} Euros")
+}
+
+/*
+Confeccionar una función que reciba entre 2 y 5 enteros.
+La misma nos debe retornar la suma de dichos valores. Debe tener tres parámetros por defecto.
+ */
+fun sumarConFuncionPorDefecto() {
+    sumar(2,3,4,5,6)
+    sumar(2,3,4)
+    sumar(2,3)
+}
+
+fun sumar(i: Int, i1: Int, i2: Int=0, i3: Int=0, i4: Int=0) {
+    println("la suma de la funcion es: ${i+i1+i2+i3+i4}")
+}
+
+/*
+Confeccionar una función que reciba un String como parámetro y en forma opcional un segundo String con un caracter.
+La función debe mostrar el String subrayado con el caracter que indica el segundo parámetro
+ */
+fun subrayarString() {
+    subrayando("Departamento Finanzas","*")
+    subrayando("Departamento de contabilidad")
+}
+
+fun subrayando(cadena: String, caracter: String="=") {
+    println(cadena)
+    for (i in 0..cadena.length-1){
+        print(caracter)
+    }
+    println()
+}
+
 /*
 Desarrollar un programa que permita cargar n números enteros y luego nos informe cuántos valores fueron pares y cuántos impares.
 Emplear el operador "%" en la condición de la estructura condicional:
