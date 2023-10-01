@@ -22,9 +22,165 @@ fun main() {
     //tablaMultiplicarNombrada()
     //operariosArrays()
     //AlturaPersonasArrays()
-    ArrayOrdenado()
+    //ArrayOrdenado()
+    //ArrayPrimeroUltimo()
+    //Array5Elementos()
+    //Array2Funciones()
+    //Array8Elementos()
+    //SumaDosArrays()
+    ArraysSumaSueldosOperarios()
 
 }
+/*
+Se desea almacenar los sueldos de operarios.
+Cuando se ejecuta el programa se debe pedir la cantidad de sueldos a ingresar.
+Luego crear un array con dicho tamaño.
+Definir una función de carga y otra de impresión.
+ */
+fun ArraysSumaSueldosOperarios() {
+    var numSueldos=0
+    println("Cantidad de sueldos a ingresar")
+    numSueldos= readln().toInt()
+    var array= arrayOfNulls<Double>(numSueldos)
+    llenarArrayDouble(array)
+    imprimirArrayDouble(array)
+}
+
+fun imprimirArrayDouble(array: Array<Double?>) {
+    for (i in 0..array.size-1){
+        println("El sueldo alojado en la posicion $i del array es: ${array[i]}")
+    }
+}
+
+fun llenarArrayDouble(array: Array<Double?>) {
+    var sueldo:Double=0.0
+    for(i in 0..array.size-1){
+        sueldo=(Math.random()*1000)+700
+        array[i]=Math.round(sueldo*100)/100.toDouble()
+
+    }
+
+}
+
+/*
+Realizar un programa que pida la carga de dos array numéricos enteros de 4 elementos.
+Obtener la suma de los dos arreglos elemento a elemento,
+dicho resultado guardarlo en un tercer arreglo del mismo tamaño.
+
+ */
+fun SumaDosArrays() {
+    var array1= arrayOfNulls<Int>(4)
+    var array2= arrayOfNulls<Int>(4)
+    var arraySuma= arrayOfNulls<Int>(2)
+    var suma1=0
+    var suma2=0
+    llenarArray(array1)
+    llenarArray(array2)
+    for (i in array1){
+        suma1+=i!!
+    }
+    for (i in array2){
+        suma2+=i!!
+    }
+    arraySuma[0]=suma1
+    arraySuma[1]=suma2
+    for(i in arraySuma){
+        println(i)
+    }
+
+
+
+
+}
+
+/*
+Desarrollar un programa que permita ingresar un array de 8 elementos enteros, e informe:
+ - El valor acumulado de todos los elementos.
+ - El valor acumulado de los elementos que sean mayores a 36.
+ - Cantidad de valores mayores a 50.
+(Definir dos for, en el primero realizar la carga y en el segundo proceder a analizar cada elemento)
+ */
+fun Array8Elementos() {
+    val tamanhoArray=8
+    var array= arrayOfNulls<Int>(tamanhoArray)
+    var suma:Int=0
+    var sumaMayor36:Int=0
+    var sumaMayor50:Int=0
+    for(i in 0..array.size-1){
+        array[i]=(Math.random()*100).toInt()
+        println(array[i])
+    }
+    for(i in array){
+        suma+=i!!
+        if(i!!>36){
+            sumaMayor36+=i
+        }
+        if(i!!>50)
+            sumaMayor50+=i
+
+    }
+    println("La suma de todos los numeros del array es: $suma")
+    println("Numeros del array mayores de 36: $sumaMayor36")
+    println("Numeros del array mayores de 50: $sumaMayor50")
+
+}
+
+/*
+Definir en la función main un array de enteros de 5 elementos.
+Declarar dos funciones, en una efectuar la carga de sus elementos y en la otra su impresión..
+ */
+fun Array2Funciones() {
+    var array= arrayOfNulls<Int>(5)
+    llenarArray(array)
+    imprimirArray(array)
+}
+
+
+
+
+fun imprimirArray(array: Array<Int?>) {
+    for (i in 0..array.size-1){
+        println("El valor de la posicion $i del array es ${array[i]}")
+    }
+}
+
+fun llenarArray(array: Array<Int?>) {
+    var valor:Int
+    for (i in 0..array.size-1){
+        println("Dame el valor para la posicion $i del array")
+        valor= readln().toInt()
+        array[i]=valor
+    }
+
+}
+/*
+Cargar un array de 5 elementos de tipo entero. Imprimir luego todo el array.
+ */
+
+
+
+fun Array5Elementos() {
+    var array:Array<Int> = arrayOf(20,30,40,50,60)
+    for(i in 0..array.size-1){
+        println("La posicion $i del array es ${array[i]}")
+    }
+    println()
+    var contador=0
+    for(i in array){
+        println("La posicion $contador del array es $i")
+        contador++
+    }
+}
+/*
+Cargar un array de 10 elementos de tipo entero. Imprimir luego el primer y último elemento.
+ */
+fun ArrayPrimeroUltimo() {
+
+    var array:Array<Int> = arrayOf(4,5,6,89,45,23,45,2,6,90)
+    println("El primer elemento del array es ${array.first()}")
+    println("El ultimo elemento del array es ${array.last()}")
+}
+
 /*
 Cargar un array de 10 elementos de tipo entero y verificar posteriormente si el mismo está ordenado de menor a mayor.
  */
