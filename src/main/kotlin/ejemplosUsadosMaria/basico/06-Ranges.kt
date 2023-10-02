@@ -1,4 +1,4 @@
-package Pto1_ProgramacionEstructuradaModular
+package ejemplosUsadosMaria.basico
 
 /**
  * Los rangos y progresiones nos permiten operar con secuencias de números.

@@ -1,4 +1,4 @@
-package Pto2_ProgOrientadaObjetos
+package ejemplosUsadosMaria.POO
 
 /**
  * Kotlin es un lenguaje tipado, la definición de los objetos se hacen por clases

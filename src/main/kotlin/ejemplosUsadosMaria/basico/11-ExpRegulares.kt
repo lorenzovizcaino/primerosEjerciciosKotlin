@@ -1,4 +1,4 @@
-package Pto1_ProgramacionEstructuradaModular
+package ejemplosUsadosMaria.basico
 
 /*
 // También podemos usar expresiones regulares

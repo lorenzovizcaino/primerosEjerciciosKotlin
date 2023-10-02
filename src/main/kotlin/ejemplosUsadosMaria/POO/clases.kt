@@ -1,4 +1,4 @@
-package Pto2_ProgOrientadaObjetos.paraEjercicios
+package ejemplosUsadosMaria.POO
 
 //fuente - https://www.develou.com/clases-en-kotlin/
 

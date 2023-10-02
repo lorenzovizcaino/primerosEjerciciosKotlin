@@ -1,4 +1,4 @@
-package Pto1_ProgramacionEstructuradaModular
+package ejemplosUsadosMaria.basico
 
 /*
 Entrada de datos con readln()

@@ -1,4 +1,4 @@
-package Pto1_ProgramacionEstructuradaModular
+package ejemplosUsadosMaria.basico
 
 /*
 var se puede cambiar su valor: lectura y escritura

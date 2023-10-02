@@ -1,4 +1,4 @@
-package Pto1_ProgramacionEstructuradaModular.ejerciciosPropuestos
+package ejemplosUsadosMaria.basico
 
 //https://www.develou.com/excepciones-en-kotlin/
 

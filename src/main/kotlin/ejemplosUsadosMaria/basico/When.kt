@@ -1,4 +1,4 @@
-package Pto1_ProgramacionEstructuradaModular.ejerciciosPropuestos
+package ejemplosUsadosMaria.basico
 // fuentes: https://cursokotlin.com/capitulo-8-expresion-when-kotlin/
 //          https://www.develou.com/expresion-when-en-kotlin/
 fun main(args: Array<String>) {

@@ -1,4 +1,4 @@
-package Pto1_ProgramacionEstructuradaModular
+package ejemplosUsadosMaria.basico
 
 /*
 En ciencias de la computación, un tipo de dato informático o simplemente tipo,
