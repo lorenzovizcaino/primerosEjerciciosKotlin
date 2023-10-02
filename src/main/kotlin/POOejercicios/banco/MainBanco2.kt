@@ -25,6 +25,7 @@ fun main() {
     var listaDeudor:MutableList<Banco2> = mutableListOf()
     var listaNulo:MutableList<Banco2> = mutableListOf()
 
+
     do{
         cuenta=Banco2()
         println("Introduzca numero de cuenta")
@@ -35,6 +36,7 @@ fun main() {
             cuenta.numeroCuenta=numCuenta
             cuenta.saldo=saldo
             lista.add(cuenta)
+
 
             when{
                 cuenta.saldo>0 -> {

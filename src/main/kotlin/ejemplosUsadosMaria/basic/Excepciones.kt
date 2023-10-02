@@ -36,6 +36,7 @@ fun countDigits(userInput: String?): Int {
     return userInput.count(Char::isDigit)
 }
 
+
 //como expresión
 fun countDigits2(userInput: String?) =
     if (userInput.isNullOrBlank())

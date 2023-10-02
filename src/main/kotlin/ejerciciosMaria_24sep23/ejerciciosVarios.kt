@@ -8,7 +8,7 @@ fun main() {
     //notasConWhile()
     //alturasPersonasConWhile()
     //paresImparesWhile()
-    //bancoDoWhile()
+    bancoDoWhile()
     //triangulosFor()
     //AnalizarNumerosFor()
     //positivoNegativoNuloWhen()

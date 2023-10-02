@@ -4,15 +4,17 @@ class Banco2 {
 
     var numeroCuenta:Int=0
         get() = field
-        set(numeroCuenta) {
-            field=numeroCuenta
+        set(value) {
+            field = value
         }
+
 
     var saldo:Double=0.0
         get() = field
-        set(saldo) {
-            field = saldo
+        set(value) {
+            field = value
         }
+
 
     constructor(numeroCuenta: Int, saldo: Double) {
         this.numeroCuenta = numeroCuenta
