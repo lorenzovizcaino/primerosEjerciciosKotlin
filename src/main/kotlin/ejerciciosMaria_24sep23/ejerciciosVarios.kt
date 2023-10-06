@@ -102,7 +102,7 @@ Desarrollar un programa que permita ingresar un array de 8 elementos enteros, e 
  */
 fun Array8Elementos() {
     val tamanhoArray=8
-    var array= arrayOfNulls<Int>(tamanhoArray)
+    var array= arrayOf(tamanhoArray)
     var suma:Int=0
     var sumaMayor36:Int=0
     var sumaMayor50:Int=0
