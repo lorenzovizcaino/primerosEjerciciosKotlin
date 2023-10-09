@@ -14,14 +14,14 @@ class Example {
     }
 }
 public class AnonymousDemo {
-    public static void main(String args[]) {
-        Example e = new Example();
-        e.example(new DemoTipoTres() {
-            @Override
-            public void demo() {
-                System.out.println("Type - 3");
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        Example e = new Example();
+//        e.example(new DemoTipoTres() {
+//            @Override
+//            public void demo() {
+//                System.out.println("Type - 3");
+//            }
+//        });
+//    }
 }
 }
