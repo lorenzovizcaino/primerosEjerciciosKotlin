@@ -2,27 +2,27 @@ package tarea1Mejorada
 
 fun main() {
 
-    var basePizza1=BasePizza("Mediterranea",15.30)
-    var aceitunas=Ingredientes("Aceitunas",1.20)
-    var brocoli=Ingredientes("Brocoli",0.90)
-    var gambas=Ingredientes("Gambas",1.80)
-    var salami=Ingredientes("Salami",1.00)
+    val basePizza1=BasePizza("Mediterranea",15.30)
+    val aceitunas=Ingredientes("Aceitunas",1.20)
+    val brocoli=Ingredientes("Brocoli",0.90)
+    val gambas=Ingredientes("Gambas",1.80)
+    val salami=Ingredientes("Salami",1.00)
     val listaIngredientes1:MutableList<Ingredientes> = mutableListOf(aceitunas,brocoli,gambas,salami)
 
-    var basePizza2=BasePizza("4 Quesos",12.60)
+    val basePizza2=BasePizza("4 Quesos",12.60)
 
-    var basePizza3=BasePizza("Caprichosa",14.80)
-    var anchoas=Ingredientes("Anchoas",1.30)
-    var champinhones=Ingredientes("Champiñones",1.70)
+    val basePizza3=BasePizza("Caprichosa",14.80)
+    val anchoas=Ingredientes("Anchoas",1.30)
+    val champinhones=Ingredientes("Champiñones",1.70)
     val listaIngredientes2:MutableList<Ingredientes> = mutableListOf(anchoas,champinhones,gambas)
 
 
 
 
-    var pedido1=Pedido(1,basePizza2)
-    var pedido2=Pedido(2,basePizza1,listaIngredientes1)
-    var pedido3=Pedido(3,basePizza3,listaIngredientes2)
-    var lista:MutableList<Pedido> = mutableListOf()
+    val pedido1=Pedido(1,basePizza2)
+    val pedido2=Pedido(2,basePizza1,listaIngredientes1)
+    val pedido3=Pedido(3,basePizza3,listaIngredientes2)
+    val lista:MutableList<Pedido> = mutableListOf()
     lista.add(pedido1)
     lista.add(pedido2)
     lista.add(pedido3)
