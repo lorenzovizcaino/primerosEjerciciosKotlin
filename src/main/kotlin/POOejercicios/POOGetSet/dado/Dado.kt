@@ -1,5 +1,7 @@
 package POOejercicios.POOGetSet.dado
 
+import kotlin.random.Random
+
 
 /*
 Plantear una clase llamada Dado.
@@ -9,7 +11,7 @@ si llega un valor que no está comprendido en este rango se debe cargar un 1.
 Definir dos métodos, uno que genere un número aleatorio entre 1 y 6 y otro que lo imprima.
 Al constructor llega el valor inicial que debe tener el dado (tratar de enviarle el número 7)
  */
-class Dado {
+class Dado (valor:Int){
 
     var valor:Int=1
         set(value) {
@@ -17,4 +19,11 @@ class Dado {
                 field=1
             }else field = value
         }
+
+    fun generarAleatorio(){
+        valor= Random.nextInt(1,7)
+    }
+    fun imprimirValor(){
+        println("El valor del dado es: $valor")
+    }
 }
